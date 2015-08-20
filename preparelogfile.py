@@ -12,8 +12,7 @@ def parseline(line):
     try:
         (linedict['ipnumber'], tmp, tmp, linedict['date'], tmp, tmp) = quoteprep[0].split(" ")
         (linedict['method'], linedict['path'], linedict['protocol']) = quoteprep[1].split(" ")
-        (tmp, linedict['returncode'], linedict['bytestransferred'], tmp) = quoteprep[2].split(" ")
-        linedict['url'] = quoteprep[3]
+        (tmp, linedict['returncode'], linedict['bytestransferred']) = quoteprep[2].split(" ")
         linedict['date'] = linedict['date'][1:]
         
     except ValueError:
