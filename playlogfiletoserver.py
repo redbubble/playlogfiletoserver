@@ -5,9 +5,9 @@ from generatedrequests import requests as therequests
 import pyparallelcurl
 import pycurl
 
-server = 'http://www.example.com'
-speedup = 4
-maxparallelrequests = 100
+server = 'http://localhost:8080'
+speedup = 1
+maxparallelrequests = 9999
 
 sleepduration = 0.5/speedup
 t = datetime.datetime.now()
