@@ -36,8 +36,8 @@ def on_request_done(content, url, ch, search):
         print "Fetch error for "+url
         return
     
-    httpcode = ch.getinfo(pycurl.HTTP_CODE)   
-    transfertime = ch.getinfo(pycurl.TOTAL_TIME)
+    httpcode = ch.getinfo(2097154) # For some reason pycurl.HTTP_CODE produces error
+    transfertime = ch.getinfo(3145731) # ... pycurl.TOTAL_TIME too
     if httpcode != 200:
         print "%0.3f seconds fetch error %s for %s" % (transfertime, str(httpcode),url)
         return
